@@ -1,0 +1,27 @@
+Release 0: Which Floor Button
+-Decide which floor is desired.
+-Determine if current floor is above or below desired floor.
+	-If current floor is desired floor, do nothing.
+	-If current floor is above desired floor:
+		-Locate button indicating downward motion
+			-Lift and extend pseudoarm
+			-Extend pseudofinger
+			-Use pseudofinger to depress button
+			-Move forward into elevator	when doors open
+	-Locate the button with the corresponding floor number
+		-Lift and extend pseudoarm
+		-Extend pseudofinger
+		-Use pseudofinger to depress button
+		-Move forward out of elevator when doors open
+
+Release 1: Call Friend on Landline
+1.Pick up phone and put speaker to ear
+	-Wait for dial tone
+2.Press the buttons in the same order that the phone number is written.
+3.If nobody answers:
+	-Follow automated instructions
+	-Leave audio recording when prompted
+	-Hang up
+	-Wait for response
+4.Talk to friend
+5.Place phone back on receiver.
