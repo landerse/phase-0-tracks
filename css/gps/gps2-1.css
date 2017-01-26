@@ -1,3 +1,32 @@
-html{
-	background-color:gray;
+section.column-1 {
+  /*display: inline-block;*/
+  float: left;
+  background-color: indigo;
+  /*vertical-align: text-top;*/
+  width: 40%;
+  /*width: 40%;*/
+  padding: 5%; */
 }
+
+section.column-2 {
+ /* display: inline-block;*/
+  float: right;
+  background-color: yellow;
+  /*vertical-align: text-top;*/
+  width: 40%;
+  /*width: 40%;*/
+  padding: 5%;
+}
+div.wrapper{
+  overflow: auto;
+  font-family: Helvetica;
+}
+h1 {
+  text-align:center;
+}
+footer {
+  text-align:center;
+}
+/*I left the commented out code in to show that we did use styling to change the page
+at first, but we wanted to know how our guide normally does it, so she showed us how to 
+float and wrap it in a div with an overflow:auto; property.*/
