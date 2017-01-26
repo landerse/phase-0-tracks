@@ -14,20 +14,18 @@ actual_age = 2017 - year
 is_vampire = nil
 if (age == actual_age) && (bread == "y" || insurance == "y")
   is_vampire = "Probably not a vampire."
-else
-  is_vampire = "Results inconclusive"
 end
 if (age != actual_age) && (bread == "n" || insurance == "n")
   is_vampire = "Probably a vampire."
-else
-  is_vampire = "Results inconclusive"
 end
 if (age != actual_age) && (bread == "n" && insurance == "n")
   is_vampire = "Almost certainly a vampire."
-else
-  is_vampire = "Results inconclusive"
 end
 if (user == "drake cula" || user == "tu fang")
   is_vampire = "Definitely a vampire."
+end
+if (is_vampire != "Probably not a vampire." && is_vampire != "Probably a vampire." && 
+	is_vampire != "Almost certainly a vampire." && is_vampire!= "Definitely a vampire.")
+	is_vampire = "Results inconclusive."
 end
 puts "#{is_vampire}"
