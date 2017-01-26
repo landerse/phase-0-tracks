@@ -1,3 +1,8 @@
+puts "How many employees will be processed?"
+employees = gets.chomp.to_i
+
+counter = 0
+while counter < employees do
 puts "What is your name?"
 user = gets.chomp.downcase
 puts "How old are you?"
@@ -28,4 +33,15 @@ if (is_vampire != "Probably not a vampire." && is_vampire != "Probably a vampire
 	is_vampire != "Almost certainly a vampire." && is_vampire!= "Definitely a vampire.")
 	is_vampire = "Results inconclusive."
 end
+
+allergy = ""
+until (allergy == "sunshine" || allergy == "done") do
+  puts "Name any allergies, one at a time. Type 'done' to exit."
+  allergy = gets.chomp.downcase
+  if allergy == "sunshine"
+    is_vampire = "Probably a vampire."
+  end
+end
 puts "#{is_vampire}"
+counter += 1
+end
