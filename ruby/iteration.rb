@@ -54,3 +54,17 @@ puts h
 arr.keep_if{|food_item| food_item[0] == "c"}
 puts "Post keep array"
 puts arr
+
+arr << "apple"
+arr << "beef"
+
+h[:apple] = "fruit"
+h[:beef] = "protein"
+
+arr = arr.select! {|food_item| food_item[0] == "c"}
+puts "Post select array"
+puts arr
+
+h = h.select! {|food_item, food_type| food_type == "vegetable"}
+puts "Post select hash"
+puts h
