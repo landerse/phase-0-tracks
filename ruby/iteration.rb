@@ -48,4 +48,9 @@ arr.delete_if{|food_item| food_item == "beef"}
 puts "Post delete array"
 puts arr
 
-
+h.keep_if{|food_item, food_type| food_type == "vegetable"}
+puts "Post keep hash"
+puts h
+arr.keep_if{|food_item| food_item[0] == "c"}
+puts "Post keep array"
+puts arr
