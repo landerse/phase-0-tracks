@@ -41,6 +41,7 @@ end
 puts "Post map array:"
 puts arr
 
+#Release 2
 h.delete_if{|food_item, food_type| food_item == :beef}
 puts "Post delete hash"
 puts h
@@ -55,6 +56,7 @@ arr.keep_if{|food_item| food_item[0] == "c"}
 puts "Post keep array"
 puts arr
 
+#repopulate array and hash
 arr << "apple"
 arr << "beef"
 
@@ -68,3 +70,26 @@ puts arr
 h = h.select! {|food_item, food_type| food_type == "vegetable"}
 puts "Post select hash"
 puts h
+
+arr = arr.drop_while {|food_item| food_item.length < 8}
+puts "Post drop array"
+puts arr
+
+h[:apple] = "fruit"
+h[:beef] = "protein"
+
+puts "Repopulated hash:"
+puts h
+
+var = true
+
+h.delete_if do |food_item, food_type|
+	if food_type != "vegetable"
+		var = false
+	end
+	var
+end
+
+puts "Final hash"
+puts h
+#I know we already used delete_if, but this is the workaround my pair came up with for the fourth hash challenge.
