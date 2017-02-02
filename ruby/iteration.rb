@@ -14,3 +14,17 @@ h = {
 	apple: "fruit",
 	beef: "protein"
 }
+
+puts "Original array:"
+puts arr
+puts "Original hash:"
+puts h
+
+arr.each {|food_item| puts "I like to eat #{food_item}"}
+
+h.each {|food_item, food_type| puts "#{food_item} is #{food_type}"}
+
+puts "Post each array:"
+puts arr
+puts "Post each hash:"
+puts h
