@@ -15,6 +15,7 @@ h = {
 	beef: "protein"
 }
 
+
 puts "Original array:"
 puts arr
 puts "Original hash:"
@@ -28,3 +29,14 @@ puts "Post each array:"
 puts arr
 puts "Post each hash:"
 puts h
+
+arr.map! do |food_item|
+	if food_item != "beef"
+		food_item << "s"
+	else
+		food_item
+	end
+end
+
+puts "Post map array:"
+puts arr
