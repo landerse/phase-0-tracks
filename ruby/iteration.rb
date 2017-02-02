@@ -5,4 +5,12 @@ def practice
 	yield(param1, param2)
 end
 
-practice { |param1, param2| puts "I want #{param1} AND #{param2}"}
+#practice { |param1, param2| puts "I want #{param1} AND #{param2}"}
+
+arr = ["carrot", "cucumber", "apple", "beef"]
+h = {
+	carrot: "vegetable",
+	cucumber: "vegetable",
+	apple: "fruit",
+	beef: "protein"
+}
