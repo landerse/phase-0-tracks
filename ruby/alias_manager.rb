@@ -1,3 +1,5 @@
+#Method to take name and advance letter by one.
+#Deals with "z" -> "aa"
 def new_alias(full_name)
 	names = full_name.split(" ")
 	names.reverse!
@@ -12,7 +14,19 @@ def new_alias(full_name)
 	names = namearray.join("")
 	end
 end
-name = "Lucas Anderzen"
+
+#driver code
 name_and_alias = {}
-alias_name = new_alias(name).join(" ")
-p alias_name
+name = ""
+until name.downcase == "quit"
+	puts "Enter name to create alias, or enter 'quit'"
+	name = gets.chomp
+	if name.downcase == "quit"
+	  next
+	end
+	alias_name = new_alias(name).join(" ")
+	puts alias_name
+	name_and_alias[name] = alias_name
+end
+
+p name_and_alias.each {|key, value| puts "#{key}, also known as #{value}"}
