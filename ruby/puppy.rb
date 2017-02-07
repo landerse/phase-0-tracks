@@ -14,3 +14,5 @@ Bark
 Whine
 Beg
 =end
+class Puppy
+end
