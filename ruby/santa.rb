@@ -31,6 +31,15 @@ class Santa
 	def gender=(gender)
 		@gender = gender
 	end
+
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
+
 end
 
 bob = Santa.new("male", "black")
@@ -47,8 +56,9 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African",
 # 	i += 1
 # end
 # p santas
-p bob
+#p bob
 bob.get_mad_at("Vixen")
 bob.celebrate_birthday
 bob.gender = "female"
-p bob
+p bob.age
+p bob.ethnicity
