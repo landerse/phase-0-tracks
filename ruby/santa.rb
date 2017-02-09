@@ -1,5 +1,7 @@
 class Santa
-
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+	
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
 		@gender = gender
@@ -28,17 +30,17 @@ class Santa
 	  end
 	end	
 
-	def gender=(gender)
-		@gender = gender
-	end
+	# def gender=(gender)
+	# 	@gender = gender
+	# end
 
-	def age
-		@age
-	end
+	# def age
+	# 	@age
+	# end
 
-	def ethnicity
-		@ethnicity
-	end
+	# def ethnicity
+	# 	@ethnicity
+	# end
 
 end
 
@@ -59,6 +61,6 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African",
 #p bob
 bob.get_mad_at("Vixen")
 bob.celebrate_birthday
-bob.gender = "female"
+p bob.gender = "female"
 p bob.age
 p bob.ethnicity
