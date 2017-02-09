@@ -1,7 +1,7 @@
 class Santa
 	attr_reader :age, :ethnicity
-	attr_accessor :gender
-	
+	attr_accessor :gender, :age
+
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
 		@gender = gender
@@ -44,10 +44,10 @@ class Santa
 
 end
 
-bob = Santa.new("male", "black")
+#bob = Santa.new("male", "black")
 #bob.speak
 #bob.eat_milk_and_cookies("snickerdoodle")
-santas = []
+#santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", 
 	"prefer not to say", "Mystical Creature (unicorn)", "N/A"]
@@ -59,8 +59,18 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African",
 # end
 # p santas
 #p bob
-bob.get_mad_at("Vixen")
-bob.celebrate_birthday
-p bob.gender = "female"
-p bob.age
-p bob.ethnicity
+# bob.get_mad_at("Vixen")
+# bob.celebrate_birthday
+# p bob.gender = "female"
+# p bob.age
+# p bob.ethnicity
+i = 0
+
+while i < 200 do
+	 santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	 santa.age = rand(0...140)
+	p santa.age
+	p santa.gender
+	p santa.ethnicity
+	i += 1	
+end
