@@ -71,4 +71,20 @@ class Hangman
 		      	letter = ""
 	      	end
 	end
+
+	def end_message
+		if @word_to_guess.sort == @blank_spaces.sort
+	  		p @blank_spaces
+	  		puts "Congratulations! You win! The word is #{@blank_spaces.join}!"
+	  	elsif @guess_counter == 0
+	  		puts "You're a looooooooooooser. Ha ha ha. By the way, the word was '#{@word_to_guess.join},' dummy."
+	  	end
+	end
 end
+
+hangman= Hangman.new
+puts "Enter word to guess!"
+hangman.word_to_guess(gets.chomp.downcase)
+system("cls")
+hangman.guesser
+hangman.end_message
