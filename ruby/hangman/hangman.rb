@@ -43,4 +43,32 @@ class Hangman
 	    end
 	  @word_to_guess = word.split("")
 	end
+
+	def guesser
+		  	until ((@word_to_guess.sort == @blank_spaces.sort)||@guess_counter == 0)
+		  	p @blank_spaces
+		  	puts "Guess a letter! #{@guess_counter} guess(es) remaining!"
+		  	letter = gets.chomp.downcase
+	    	  	if letter == @word_to_guess.join
+	    	  		@blank_spaces.replace(@word_to_guess)
+	    	  	elsif
+	    			@already_guessed.include?(letter)
+	    	    puts "Already guessed, try again!"
+	    	    guesser
+	    	  	else
+	      	  @guess = letter
+	   		  @already_guessed << letter
+	      	  i=0
+		      	  while i < @word_to_guess.length
+		      	    if @guess == @word_to_guess[i]
+		      	      @blank_spaces[i] = @guess
+		      	    end
+		      	    i += 1
+		      	  end
+		      	  @guess_counter -= 1 
+		      	  @blank_spaces
+		      	end
+		      	letter = ""
+	      	end
+	end
 end
