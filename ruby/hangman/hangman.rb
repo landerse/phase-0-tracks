@@ -51,7 +51,7 @@ class Hangman
 	    	  	elsif
 	    			@already_guessed.include?(letter)
 	    	    puts "Already guessed, try again!"
-	    	    guesser
+	    	    guesser(gets.chomp.downcase)
 	    	  	else
 	      	  @guess = letter
 	   		  @already_guessed << letter
