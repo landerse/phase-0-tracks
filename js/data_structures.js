@@ -24,7 +24,8 @@ function Car(color, model, nickname){
 
 var cars = [];
 for (i = 0; i<10; i++){
-	var car = new Car(colors[Math.floor(Math.random() * (colors.length))], models[Math.floor(Math.random() * (models.length))], names[Math.floor(Math.random() * (names.length))]);
+	var car = new Car(colors[Math.floor(Math.random() * (colors.length))], models[Math.floor(Math.random() * (models.length))],
+	 names[Math.floor(Math.random() * (names.length))]);
 	car.drive();
 	console.log(car);
 }
