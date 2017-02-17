@@ -1,4 +1,5 @@
-
+//longestWord pseudocode
+//take array, compare length of each element, return the longest element in array.
 function longestWord(array) {
   var array_holder = array;
   var longestWord = 0;
@@ -13,7 +14,11 @@ function longestWord(array) {
   }
   return wordHolder;
 }
-
+//pairsharing pseudocode
+//take two objects
+//compare properties
+//return true if at least one matches
+//false if none match
 function sharePair(obj1,obj2){
 	if (obj1.name == obj2.name || obj1.age == obj2.age){
 		return true
@@ -21,7 +26,10 @@ function sharePair(obj1,obj2){
 		return false
 	}
 }
-
+//randomword pseudocode
+//take number of words to generate
+//generate gibberish word of length between 1 and 10
+//push word to array
 function randomWords(int){
 	var randomData = [];
 	for (var i = 0; i < int; i++){
