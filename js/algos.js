@@ -22,6 +22,20 @@ function sharePair(obj1,obj2){
 	}
 }
 
+function randomWords(int){
+	var randomData = [];
+	for (var i = 0; i < int; i++){
+		var alphabet = "abcdefghijklmnopqrstuvwxyz";
+		var wordToAdd = "";
+		var lengthOfWord = Math.floor(Math.random() * 11);
+		for (var j = 0; j < lengthOfWord; j++){
+			wordToAdd += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+			
+   		}
+   		randomData.push(wordToAdd);
+	}
+	return randomData;
+}
 
 ///////////Release0
 // var names = ["Tammy","Mark","Jim","Bo","Supercalifragilisticexpalidocious", "Timmytim"];
@@ -32,4 +46,10 @@ function sharePair(obj1,obj2){
 // var person1 = {name:"Jimbo", age: 23};
 // var person2 = {name:"Johnbo", age: 23};
 // console.log(sharePair(person1,person2))
+///////////Release2
+// for (var i = 0; i < 10; i++){
+// 	var randomRandom = randomWords(5)
+// 	console.log(randomRandom)
+// 	console.log(longestWord(randomRandom))
+// }
 
